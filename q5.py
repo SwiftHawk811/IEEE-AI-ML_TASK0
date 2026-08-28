@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv("student_performance.csv")
+df = pd.read_csv("data/student_performance.csv")
 print("2. First 5 rows of the dataset:")
 print(df.head().to_string())
 print("\n")
@@ -18,4 +18,4 @@ df['Improvement'] = df['Final_Score'] - df['Previous_Score']
 print("\n")
 print("9. Students with high attendance:", df[df['Attendance'] > 80]['Student'].tolist())
 df_sorted = df.sort_values(by='Final_Score', ascending=False)
-df_sorted.to_csv('processed_student_performance.csv', index=False)
+df_sorted.to_csv('data/processed_student_performance.csv', index=False)
